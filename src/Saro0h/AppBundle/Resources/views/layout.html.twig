@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Saro0h's blog</title>
+    <title>Saro0h's - Sarah Khalil</title>
     <meta content="Sarah Khalil" name="author">
     <meta content="Sarah Khalil's (aka Saro0h) Blog" name="description">
     <meta content="Symfony2, PHP, Exercises, Code, Blog, Sarah, Khalil, Engineer, SensioLabs Certified Developer" name="keywords">
@@ -50,9 +50,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
              <div class="logo">
                 <a href="index.html"><img src="{{ asset("bundles/app/images/logo.png") }}" alt="" /></a>
              </div>
+             {% set currentRoute = app.request.attributes.get('_route') %}
              <div class="cssmenu">
                 <ul id="nav">
-                    <li class="current"><a href="#section-1" class="scroll" >Home</a></li>
+                    <li {% if currentRoute == 'index' %}class="current"{% endif %}><a href="‘{{ path('index') }}" >Home</a></li>
                     <li><a href="#section-2" class="scroll">Blog</a></li>
                     <li><a href="{{ path('talks') }}">Talks</a></li>
                     <li><a href="https://github.com/saro0h" target="_blank"><img width="20px" src="{{ asset("bundles/app/images/github.png") }}" /> Github</a></li>
@@ -86,13 +87,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="features-list">
                   <div class="col_1_of_3 span_1_of_3">
                     <div class="dc-head">
-                        <div class="dc-head-icon">
-                            <img src="{{ asset("bundles/app/images/features-img1.png") }}" alt="" />
-                        </div>
-                        <div class="dc-head-info">
-                            <h3>Some code</h3>
-                            <p>All I can share about the code I produce with PHP and Symfony.</p>
-                        </div>
+                        <a href="{{ path('code') }}">
+                            <div class="dc-head-icon">
+                                <img src="{{ asset("bundles/app/images/features-img1.png") }}" alt="" />
+                            </div>
+                            <div class="dc-head-info">
+                                <h3>Some code</h3>
+                                <p>All I can share about the code I produce with PHP and Symfony.</p>
+                            </div>
+                         </a>
                         <div class="clear"> </div>
                     </div>
                   </div>

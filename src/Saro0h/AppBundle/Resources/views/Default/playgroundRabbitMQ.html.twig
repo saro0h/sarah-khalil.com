@@ -1,0 +1,23 @@
+{% extends "AppBundle::layout_content.html.twig" %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        <a href="{{ path("index") }}">Home</a> > <a href="{{ path("index") }}#section-2">Blog</a> > <a href="{{ path("code") }}">Code</a> > Playground RabbitMQ
+    </div>
+{% endblock %}
+
+{% block title %} Playground RabbitMQ {% endblock %}
+
+{% block big_title %}{% endblock %}
+
+{% block content %}
+    <h4>Disclaimer</h4>
+    <p>
+        I tried the rabbitMQ bundle as I didn't know it well. It's not perfect, but it can give you an idea of how you could use it in your projects.
+    </p>
+    <br /><br /><br />
+   <script src="https://gist.github.com/saro0h/b12659e297b1e28c50ff.js"></script>
+   <a class="btn btn-warning pull-right" href="#">&uarr; Back to top</a>
+{% endblock %}
+
+

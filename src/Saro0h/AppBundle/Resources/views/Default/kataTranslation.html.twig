@@ -1,0 +1,30 @@
+{% extends "AppBundle::layout_content.html.twig" %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        <a href="{{ path("index") }}">Home</a> > <a href="{{ path("index") }}#section-2">Blog</a> > <a href="{{ path("code") }}">Code</a> > Translation kata
+    </div>
+{% endblock %}
+
+{% block title %} Translation Kata {% endblock %}
+
+{% block big_title %}{% endblock %}
+
+{% block content %}
+    <h4>Instructions</h4>
+    <p>
+        The principle is simple with katas: first, take time to read everything below, then, install a clean version of <a href="http://symfony.com/download">Symfony standard edition</a>. Once you have it, generate a bundle with the command "php app/console generate:bundle".
+    </p>
+    <p>
+        Make sure that at least one page is displayed correctly, and here you go! Follow the steps to achieve the exercise, and repeat yourself as much as you need, until you acquire reflexes.
+    </p>
+    <br />
+    <p>
+        You must be able to achieve this exercise on <strong>15 minutes</strong>, with training.
+    </p>
+    <br /><br /><br />
+   <script src="https://gist.github.com/saro0h/d4b095523b7721f6c9c2.js"></script>
+   <a class="btn btn-warning pull-right" href="#">&uarr; Back to top</a>
+{% endblock %}
+
+

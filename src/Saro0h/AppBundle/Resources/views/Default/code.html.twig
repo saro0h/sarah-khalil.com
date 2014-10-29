@@ -1,0 +1,55 @@
+{% extends "AppBundle::layout_content.html.twig" %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        <a href="{{ path("index") }}">Home</a> > <a href="{{ path("index") }}#section-2">Blog</a> > Code
+    </div>
+{% endblock %}
+
+{% block title %}Code{% endblock %}
+
+{% block big_title %}Some code{% endblock %}
+
+{% block content %}
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4 class="panel-title"><a href="{{ path('kata_translation') }}">Playing with translations (Symfony2)<span class="label label-info pull-right">Kata</span></a></h4>
+      </div>
+      <div class="panel-body">
+        See how set a website with multiple languages.
+      </div>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4 class="panel-title"><a href="{{ path('kata_upload') }}">Playing with uploading (Symfony2)<span class="label label-info pull-right">Kata</span></a></h4>
+      </div>
+      <div class="panel-body">
+        See how to do an upload of file.
+      </div>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4 class="panel-title"><a href="{{ path('kata_event_listener') }}">Playing with the Event Dispatcher component (Symfony2)<span class="label label-info pull-right">Kata</span></a></h4>
+      </div>
+      <div class="panel-body">
+        See how to do an event listener, an event subscriber and play with the semantic configuration.
+      </div>
+    </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title"><a href="{{ path('playground_media_api') }}">MediaApiBundle: a bundle to upload files through REST API<span class="label label-success pull-right">Playground</span></a></h4>
+      </div>
+      <div class="panel-body">
+        A standalone to use in your projects if you ever need to upload files through REST API.
+      </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title"><a href="{{ path('playground_rabbitmq') }}">Playing with RabbitMQ in Symfony2 project<span class="label label-success pull-right">Playground</span></a></h4>
+      </div>
+      <div class="panel-body">
+        I tried the RabbitMQ bundle.
+      </div>
+    </div>
+{% endblock %}
+
+
