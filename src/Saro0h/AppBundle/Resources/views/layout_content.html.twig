@@ -58,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul id="nav">
                             <li {% if currentRoute == 'index' %}class="current"{% endif %}><a href="{{ path('index') }}">Home</a></li>
                             <li><a href="#section-2" class="scroll">Blog</a></li>
-                            <li {% if currentRoute == 'talks' %}class="current"{% endif %}><a href="#section-1" class="scroll" >Talks</a></li>
+                            <li {% if currentRoute == 'talks' %}class="current"{% endif %}><a href="{{ path("talks") }}">Talks</a></li>
                             <li><a href="https://github.com/saro0h" target="_blank"><img width="20px" src="{{ asset("bundles/app/images/github.png") }}" /> Github</a></li>
                             <li><a href="https://twitter.com/saro0h" target="_blank"><img width="20px" src="{{ asset("bundles/app/images/twitter.ico") }}" /> Twitter</a></li>
                             <li><a href="https://connect.sensiolabs.com/profile/saro0h" target="_blank"><img width="20px" src="{{ asset("bundles/app/images/a4d54db4-7f17-4bd9-b4c9-1a2e6a28258d.png") }}" /> SL Connect</a></li>
