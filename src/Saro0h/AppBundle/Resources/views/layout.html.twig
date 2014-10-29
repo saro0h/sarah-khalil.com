@@ -1,0 +1,230 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Saro0h's blog</title>
+    <meta content="Sarah Khalil" name="author">
+    <meta content="Sarah Khalil's (aka Saro0h) Blog" name="description">
+    <meta content="Symfony2, PHP, Exercises, Code, Blog, Sarah, Khalil, Engineer, SensioLabs Certified Developer" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="{{ asset("bundles/app/css/style.css") }}" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <link type="image/x-icon" rel="shortcut icon" href="{{ asset("bundles/app/images/favicon.ico") }}">
+    <script src="{{ asset("bundles/app/js/jquery-1.10.2.min.js") }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset("bundles/app/js/move-top.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("bundles/app/js/easing.js") }}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/app/css/slick.css") }}" />
+    <script type="text/javascript" src="{{ asset("bundles/app/js/slick.js") }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.single-item').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                autoplay:true,
+                arrows:false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+             });
+       });
+    </script>
+</head>
+<body>
+   <div class="header">
+    <div class="header-top">
+       <div class="wrap">
+             <div class="logo">
+                <a href="index.html"><img src="{{ asset("bundles/app/images/logo.png") }}" alt="" /></a>
+             </div>
+             <div class="cssmenu">
+                <ul id="nav">
+                    <li class="current"><a href="#section-1" class="scroll" >Home</a></li>
+                    <li><a href="#section-2" class="scroll">Blog</a></li>
+                    <li><a href="{{ path('talks') }}">Talks</a></li>
+                    <li><a href="https://github.com/saro0h" target="_blank"><img width="20px" src="{{ asset("bundles/app/images/github.png") }}" /> Github</a></li>
+                    <li><a href="https://twitter.com/saro0h" target="_blank"><img width="20px" src="{{ asset("bundles/app/images/twitter.ico") }}" /> Twitter</a></li>
+                    <li><a href="https://connect.sensiolabs.com/profile/saro0h" target="_blank"><img width="20px" src="{{ asset("bundles/app/images/a4d54db4-7f17-4bd9-b4c9-1a2e6a28258d.png") }}" /> SL Connect</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+       </div>
+     </div>
+            <div class="header-bottom" id="section-1">
+                <div class="wrap">
+                    <div class="img-banner">
+                        <div class="img-banner-info">
+                            <h1><span>If nothing goes right… go left.</span></h1>
+                            <h3>Welcome on my technical blog, where I list all I read, some code, basically, where I share the most.</h3>
+                            <div class="app-btn"><a href="{{ asset("bundles/app/doc/resume-sarah-khalil.pdf") }}">Get my CV</a></div>
+                        </div>
+                        <div class="img-banner-pic"></div>
+                        <div class="clear"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <div class="main">
+        <!-- Features -->
+        <div class="features" id="section-2">
+           <div class="wrap">
+                <h2>Themes</h2>
+                <p>Choose the theme that suits you the best!</p>
+                <div class="features-list">
+                  <div class="col_1_of_3 span_1_of_3">
+                    <div class="dc-head">
+                        <div class="dc-head-icon">
+                            <img src="{{ asset("bundles/app/images/features-img1.png") }}" alt="" />
+                        </div>
+                        <div class="dc-head-info">
+                            <h3>Some code</h3>
+                            <p>All I can share about the code I produce with PHP and Symfony.</p>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                  </div>
+                 <div class="col_1_of_3 span_1_of_3">
+                    <div class="dc-head">
+                        <div class="dc-head-icon">
+                            <img src="{{ asset("bundles/app/images/features-img2.png") }}" alt="" />
+                        </div>
+                        <div class="dc-head-info">
+                            <h3>Read</h3>
+                            <p>Here is my library I read to learn Symfony2, and other stuff.</p>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                  </div>
+                  <div class="col_1_of_3 span_1_of_3">
+                    <div class="dc-head">
+                        <div class="dc-head-icon">
+                            <img src="{{ asset("bundles/app/images/features-img3.png") }}" alt="" />
+                        </div>
+                        <div class="dc-head-info">
+                            <h3>Project management</h3>
+                            <p>Let's share some of my experience.</p>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                  </div>
+                <div class="clear"></div>
+            </div>
+           </div>
+         </div>
+          <!-- Download Button  -->
+             <div class="content-middle" id="section-3">
+                 <div class="wrap">
+                     <div class="download-desc">
+                      <h2><span>Passionate</span> by <span>web</span> technologies, and hard <span>sharer</span> of what I know.</h2>
+                      <p>Take a look at my <a href="https://github.com/saro0h">github account</a>. I contribute a lot <a href="https://github.com/poledev">here too.</a></p>
+                      <!--<div class="download-button"><a href="#">Download</a></div>-->
+                    </div>
+               </div>
+            </div>
+            <!-- Testimonials -->
+                   <div class="testimonials" id="section-4">
+                     <h3>Companies I worked for</h3>
+                        <div class="wrap">
+                              <div class="slider single-item">
+                                <div>
+                                    <img src="{{ asset("bundles/app/images/sensiolabs.png") }}" alt="SensioLabs" />
+                                    <p>
+                                        From april 2012: IT project manager - Scrum master (teams from 2 to 5 developers).
+                                        <br />
+                                        Typology of projects: E-commerce, Intranet, Enterprise Resource Planing (ERP), Web printing, Content Management System (CMS).
+                                    </p>
+                                    <img style="float: right;" src="{{ asset("bundles/app/images/sl_technologies.png") }}" alt="Technologies" />
+                                </div>
+                                <div>
+                                    <img src="{{ asset("bundles/app/images/es.png") }}" alt="Extrême Sensio" />
+                                    <p>
+                                        From february to april 2012: Web developer (team of 4).
+                                        <br />
+                                        Typology of projects: Content Management System (CMS) and showcase websites.
+                                    </p>
+                                    <img style="float: right;" src="{{ asset("bundles/app/images/es_technologies.png") }}" alt="Technologies" />
+                                </div>
+                                <div>
+                                    <img src="{{ asset("bundles/app/images/dexia.png") }}" alt="Dexia Asset Management" />
+                                    <p>
+                                        From october 2010 to june 2011: Project manager assistant / Developer (team of 10). [Belgium]
+                                        <br />
+                                        Typology of project: Software allowing the generation of financial statements.
+                                    </p>
+                                    <img style="float: right;" src="{{ asset("bundles/app/images/dexia_technologies.png") }}" alt="Technologies" />
+                               </div>
+                                <div>
+                                    <img src="{{ asset("bundles/app/images/ecitizen.png") }}" alt="E-Citizen" />
+                                    <p>
+                                        From march 2010 to septembre 2010: Web Developer (team of 3).
+                                        <br />
+                                        Typology of project: E-commerce (<a href="http://www.e-citizen.com">www.e-citizen.com</a>).
+                                    </p>
+                                    <img style="float: right;" src="{{ asset("bundles/app/images/ecitizen_technologies.png") }}" alt="Technologies" />
+                                </div>
+                            </div>
+                    </div>
+               </div>
+         </div>
+       <!-- End Main -->
+
+       <!-- Footer -->
+         <div class="footer" id="section-5">
+           <div class="wrap">
+              <div class="footer-top">
+               <div class="section group">
+                <div class="col_1_of_3 span_1_of_3">
+                    <h3>@Saro0h's Twitter timeline</h3>
+                    <p>
+                        <a class="twitter-timeline"  href="https://twitter.com/Saro0h" data-widget-id="527064910111309824">Tweets by @Saro0h</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                </div>
+                <div class="col_1_of_3 span_1_of_3">
+                    <h3>@Poledev's Twitter timeline</h3>
+                    <p>
+                        <a class="twitter-timeline"  href="https://twitter.com/poledev" data-widget-id="527070564137979904">Tweets de @poledev</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </p>
+                </div>
+                 <div class="col_1_of_3 span_1_of_3">
+                    <h3>About Sarah Khalil</h3>
+                    <p>
+                        <span>Working <a href="http://sensiolabs.com">@Sensiolabs</a> since february 2012, as a IT project manager, <a href="https://connect.sensiolabs.com/badge/70/sensiolabs-certified-symfony-developer-advanced">SensioLabs certified Symfony developer</a> and <a href="http://training.sensiolabs.com">trainer</a>, I love working with <a href="http://symfony.com">Symfony2</a>. I'm always in pursuit of excellence and learning every day. </span>
+                    </p>
+                </div>
+              </div>
+            </div>
+         </div>
+          <div class="footer-bottom">
+            <div class="copy">
+              <p> Developed and fed by Sarah Khalil, powered by Symfony2, templated by  <a href="http://w3layouts.com" target="_blank">w3layouts</a> </p>
+           </div>
+         </div>
+     </div>
+       <script type="text/javascript">
+            $(document).ready(function() {
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+       <a href="#" id="toTop"> <span id="toTopHover"></span> </a>
+  </body>
+</html>
+
+
+
+
