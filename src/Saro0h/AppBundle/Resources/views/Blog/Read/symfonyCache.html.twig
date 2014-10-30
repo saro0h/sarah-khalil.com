@@ -10,7 +10,7 @@
 
 {% block big_title %}Symfony2 - Cache{% endblock %}
 
-{% block date %}Thursday, October 30th 2014{% endblock %}
+{% block date %}Thursday, October 30th 2014 - <a href="#disqus_thread">Wanna leave a comment?</a>{% endblock %}
 
 {% block content %}
     <h3>Disclaimer</h3>
@@ -144,7 +144,7 @@
                         <em>English</em>
                     </td>
                     <td>
-                        <a href="cache-app.html" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="FOSHttpCacheBundle" target="_blank">
+                        <a href="{{ path('playground_cache') }}" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="cache-app" target="_blank">
                             A little Symfony2 app
                         </a>
                     </td>
@@ -152,11 +152,53 @@
                         Let's experiment what we learnt! There is a small application showing how to use the "max-age" and "smax-age" headers, and esi's.
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <em>French</em>
+                    </td>
+                    <td>
+                        <a href="http://afsy.fr/avent/2013/13-jouons-a-cache-cache-avec-http" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="Jouons à Cache-Cache" target="_blank">
+                            Cache - Avent calendar 2013
+                        </a>
+                    </td>
+                    <td>
+                        There is nothing technical, only good advices on how to construct your caching strategy in your application.
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
 
     <div class="clear"> </div>
+
+    <hr />
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'saro0h'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'saro0h'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
 {% endblock %}
 
 
