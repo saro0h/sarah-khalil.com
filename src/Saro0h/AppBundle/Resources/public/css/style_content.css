@@ -123,6 +123,12 @@ body{
     text-transform: capitalize;
 }
 
+.date {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 1%;
+}
+
 .strong {
     font-weight: 600;
 }
