@@ -1,0 +1,160 @@
+{% extends "AppBundle::layout_content.html.twig" %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        <a href="{{ path("index") }}">Home</a> > <a href="{{ path("index") }}#section-2">Blog</a> > <a href="{{ path("read") }}">Read</a> > Symfony2 - Cache
+    </div>
+{% endblock %}
+
+{% block title %}Symfony2 - Cache{% endblock %}
+
+{% block big_title %}Symfony2 - Cache{% endblock %}
+
+{% block content %}
+    <h3>Disclaimer</h3>
+    <p>
+        <span class="label label-warning">Important</span> It's important to read the documentation coming from the symfony.com website <span class="strong">in english</span>.Indeed, the english version is the most up-to-date. Make sure to choose wisely the document version while you read it.
+        <br />
+        <span class="label label-info">Nota Bene</span> The documentation comes only from the community, who is volunteering!
+    </p>
+    <hr />
+    <p>
+        <span class="italic">
+            To contribute to the <span class="strong">english</span> version: <a href="https://github.com/symfony/symfony-docs/"><img width="20px" src="{{ asset("bundles/app/images/github.png") }}" alt="github icon" /> symfony-doc</a>
+        </span>
+        <br />
+        <span class="italic">
+            To contribute to the <span class="strong">french</span> version: <a href="https://github.com/symfony-fr/symfony-docs-fr"><img width="20px" src="{{ asset("bundles/app/images/github.png") }}" alt="github icon" /> symfony-doc-fr</a>
+        </span>
+    </p>
+
+    <hr /><hr />
+
+    <div class="row text-left">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 100px;">Language(s)</th>
+                    <th style="width: 50px;">Link(s)</th>
+                    <th>Short description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <em>English</em>
+                    </td>
+                    <td>
+                        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="RFC 2616 - HTTP Cache" target="_blank">
+                            RFC 2616 - HTTP Cache
+                        </a>
+                    </td>
+                    <td>
+                        A must read ! This RFC allows you to understand the implementation HTTP cache in the browsers side and of <span class="strong">R</span>everses <span class="strong">P</span>roxy <span class="strong">C</span>ache (aka "RPC", like Varnish, Squid…).
+                        <br />
+                        You have to read it at least once to get the big picture and have a "critical glance", so you will be able to set "<span class="italic">Cache-Control</span>", "<span class="italic">ETag</span>", "<span class="italic">Last-Modified</span>", etc. HTTP headers. Besides, <span class="strong">Validation</span> and <span class="strong">Expiration</span> cache models are widely explained.
+                        <br />
+                        This said, this is very theoretical, the next links will help you understanding all of that.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <em>English</em>
+                    </td>
+                    <td>
+                        <a href="http://tomayko.com/writings/things-caches-do" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="Things Caches Do" target="_blank">
+                            Things Caches Do
+                        </a>
+                    </td>
+                    <td>
+                        Ryan Tomayko popularizes the HTTP cache by explaining what you can find in the RFC 2616.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <em>English / French</em>
+                    </td>
+                    <td>
+                        <a href="http://symfony.com/doc/master/book/http_cache.html" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="HTTP Cache - Book (Symfony2)" target="_blank">
+                            HTTP Cache - Book (Symfony2)
+                        </a>
+                    </td>
+                    <td>
+                        You will find a reminder about the RFC explains, then a documentation around 4 axes:
+                        <br />
+                        <ul>
+                            <li><a href="http://symfony.com/doc/master/book/http_cache.html#types-of-caches" target="_blank"><span class="italic">Cache types</span></a>: <span class="strong">Private</span> (browsers) and <span class="strong">Shared</span> (Gateway cache / RPC).</li>
+                            <li><a href="http://symfony.com/doc/master/book/http_cache.html#introduction-to-http-caching" target="_blank"><span class="italic">An introduction to HTTP cache</span></a>: reminders of <span class="strong">important headers</span> and the default configuration of the cache in an application developed with Symfony2.</li>
+                            <li><a href="http://symfony.com/doc/master/book/http_cache.html#http-expiration-and-validation" target="_blank"><spans class="italic">Caching models</span></a> : <span class="strong">Validation</span> and <span class="strong">Expiration</span>, how to set them with the rich API of the Symfony2 <a href="http://symfony.com/components/HttpFoundation" target="_blank">HttpFoundation component</a>.</li>
+                            <li><a href="http://symfony.com/doc/master/book/http_cache.html#using-edge-side-includes" target="_blank"><span class="italic">Work with Edge Sides Includes</span></a>: You should have heard about <span class="strong">ESI</span>, a very interesting way of caching "pieces" of a page.</li>
+                        </ul>
+                        We particularly learn that a reverse proxy caches is implemented in PHP in the Symfony2 framework!
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <em>English / French</em>
+                    </td>
+                    <td>
+                        <a href="http://symfony.com/doc/master/cookbook/cache/varnish.html" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="Integrate Varnish in your stack" target="_blank">
+                            Integrate Varnish in your stack - cookbook (Symfony2)
+                        </a>
+                    </td>
+                    <td>
+                        It explains you what you need to implement in Varnish (with <span class="strong">V</span>arnish <span class="strong">C</span>onfiguration <span class="strong">L</span>anguage).
+                        <br />
+                        We learn the interest of the header "<span class="strong">X-FORWADED-*</span>" and the notion of "trusted proxies".
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <em>English / French</em>
+                    </td>
+                    <td>
+                        <a href="http://symfony.com/doc/master/cookbook/request/load_balancer_reverse_proxy.html" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title=" Trusted proxies with Symfony2" target="_blank">
+                            Trusted proxies - cookbook (Symfony2)
+                        </a>
+                        <a href="http://symfony.com/doc/master/reference/configuration/framework.html#reference-framework-trusted-proxies" class="btn btn-info btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title=" Trusted proxies" target="_blank">
+                            Trusted proxies - reference (Symfony2)
+                        </a>
+                    </td>
+                    <td>
+                        When you place a RPC in front of a Symfony2 application, all information coming from the RPC are place in the <span class="strong">X-Forwarded-*</span> headers. Symfony2 does not get naturally those information in the Request obejct without a minumum of <a href="http://symfony.com/doc/master/reference/configuration/framework.html#reference-framework-trusted-proxies" target="_blank">configuration</a>.
+                        <br />
+                        It thus explains the interest of the notion of "<span class="strong">trusted proxies</span>".
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <em>English</em>
+                    </td>
+                    <td>
+                        <a href="http://foshttpcachebundle.readthedocs.org/en/latest/" class="btn btn-info btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="FOSHttpCacheBundle" target="_blank">
+                            FOSHttpCache Bundle
+                        </a>
+                    </td>
+                    <td>
+                        The <span class="strong">FOSHttpCacheBundle</span> offers a lot of features on top of the Symfony2 framework. This bundle is indicated for an <a href="http://foshttpcachebundle.readthedocs.org/en/latest/features.html" target="_blank">advanced implementation</a> of the cache in your Symfony2 application (in particular, <a href="http://foshttpcachebundle.readthedocs.org/en/latest/features/invalidation.html" target="_blank">invalidation of cache</a> that can be pain in the ass sometime ;) ).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <em>English</em>
+                    </td>
+                    <td>
+                        <a href="cache-app.html" class="btn btn-success btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="FOSHttpCacheBundle" target="_blank">
+                            A little Symfony2 app
+                        </a>
+                    </td>
+                    <td>
+                        Let's experiment what we learnt! There is a small application showing how to use the "max-age" and "smax-age" headers, and esi's.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="clear"> </div>
+{% endblock %}
+
+

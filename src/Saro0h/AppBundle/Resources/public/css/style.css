@@ -263,9 +263,9 @@ body{
 	color:#f55150;
 }
 .content-middle p {
-	color:#585858;
+	color:#EEEEEE;
 	font-size:24px;
-	font-weight: 100;
+	font-weight: 500;
 	line-height: 1.6em;
 	padding:10px 0;
 	width:60%;
@@ -502,7 +502,7 @@ body{
 		font-size:18px;
 	}
 	.download-desc{
-		width:57%;
+		width:100%;
 	}
 	.testimonials p{
 		font-size:24px;

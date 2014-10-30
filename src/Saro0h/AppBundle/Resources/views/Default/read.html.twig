@@ -1,0 +1,30 @@
+{% extends "AppBundle::layout_content.html.twig" %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb">
+        <a href="{{ path("index") }}">Home</a> > <a href="{{ path("index") }}#section-2">Blog</a> > Read
+    </div>
+{% endblock %}
+
+{% block title %}Read{% endblock %}
+
+{% block big_title %}Themes{% endblock %}
+
+{% block content %}
+    <div class="col_1_of_3 span_1_of_3">
+        <div class="dc-head">
+            <a href="{{ path('symfony_cache') }}">
+                <div class="dc-head-icon">
+                    <img src="{{ asset("bundles/app/images/symfony.png") }}" alt="" />
+                </div>
+                <div class="dc-head-info">
+                    <h3>Symfony2 - Cache</h3>
+                </div>
+            </a>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <div class="clear"> </div>
+{% endblock %}
+
+

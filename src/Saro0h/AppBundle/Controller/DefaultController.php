@@ -27,7 +27,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/code", name="code")
+     * @Route("/blog/code", name="code")
      * @Template()
      */
     public function codeAction()
@@ -36,7 +36,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/kata-translation", name="kata_translation")
+     * @Route("/blog/kata-translation", name="kata_translation")
      * @Template()
      */
     public function kataTranslationAction()
@@ -45,7 +45,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/playground-rabbitmq", name="playground_rabbitmq")
+     * @Route("/blog/playground-rabbitmq", name="playground_rabbitmq")
      * @Template()
      */
     public function playgroundRabbitMQAction()
@@ -54,7 +54,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/kata-upload", name="kata_upload")
+     * @Route("/blog/kata-upload", name="kata_upload")
      * @Template()
      */
     public function uploadAction()
@@ -63,7 +63,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/kata-event-listener", name="kata_event_listener")
+     * @Route("/blog/kata-event-listener", name="kata_event_listener")
      * @Template()
      */
     public function eventListenerAction()
@@ -72,10 +72,37 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/playground-media-api-bundle", name="playground_media_api")
+     * @Route("/blog/playground-media-api-bundle", name="playground_media_api")
      * @Template()
      */
     public function playgroundMediaAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/read", name="read")
+     * @Template()
+     */
+    public function readAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/read/symfony-cache", name="symfony_cache")
+     * @Template()
+     */
+    public function symfonyCacheAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/read/playground-cache", name="playground_cache")
+     * @Template()
+     */
+    public function playgroundCacheAction()
     {
         return array();
     }
