@@ -3,3 +3,73 @@ app:
     type:     annotation
     prefix:   /
 
+index:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Default:index.html.twig'
+
+talks:
+    path: /talks
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Default:talks.html.twig'
+
+## Blog Routes ##
+
+## Code ##
+code:
+    path: /blog/code
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:code.html.twig'
+
+kata_translation:
+    path: /blog/code/kata-translation
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:kataTranslation.html.twig'
+
+kata_upload:
+    path: /blog/code/kata-upload
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:kataUpload.html.twig'
+
+kata_event_listener:
+    path: /blog/code/kata-event-listener
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:kataEventListener.html.twig'
+
+playground_rabbitmq:
+    path: /blog/code/playground-rabbitmq
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:playgroundRabbitMQ.html.twig'
+
+playground_media_api:
+    path: /blog/code/playground-media-api-bundle
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:playgroundMedia.html.twig'
+
+playground_cache:
+    path: /blog/code/playground-cache
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:playgroundCache.html.twig'
+
+## Read ##
+
+read:
+    path: /blog/read
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Read:read.html.twig'
+
+symfony_cache:
+    path: /blog/read/symfony-cache
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Read:symfonyCache.html.twig'

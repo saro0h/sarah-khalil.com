@@ -5,7 +5,7 @@ namespace Saro0h\AppBundle\Tests\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
-class DefaultControllerTest extends WebTestCase
+class BlogControllerTest extends WebTestCase
 {
     /**
      * @dataProvider allRoutes
@@ -22,8 +22,15 @@ class DefaultControllerTest extends WebTestCase
     public function allRoutes()
     {
         return array(
-            array('/'),
-            array('/talks'),
+            array('/blog/code'),
+            array('/blog/code/kata-translation'),
+            array('/blog/code/playground-rabbitmq'),
+            array('/blog/code/kata-upload'),
+            array('/blog/code/kata-event-listener'),
+            array('/blog/code/playground-media-api-bundle'),
+            array('/blog/code/playground-cache'),
+            array('/blog/read'),
+            array('/blog/read/symfony-cache'),
         );
     }
 }
