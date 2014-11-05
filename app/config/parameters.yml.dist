@@ -24,3 +24,9 @@ parameters:
     use_assetic_controller: true
 
     google_analytics: UA-XXXXXXXX-1
+
+    twitter_consumer_key:         'your-consumer-key'
+    twitter_consumer_secret:      'your-consumer-secret'
+    twitter_consumer_secret:      'your-consumer-secret'
+    twitter_access_token:         'your-access-token'
+    twitter_access_token_secret:  'your-access-token-secret'

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="twitter.manager" class="Saro0h\ShopBundle\Security\TwitterManager">
+            <argument type="service" id="router" />
+            <argument>%twitter_consumer_key%</argument>
+            <argument>%twitter_consumer_secret%</argument>
+            <argument>%twitter_access_token%</argument>
+            <argument>%twitter_access_token_secret%</argument>
+        </service>
+
+        <service id="api.github.client" class="%guzzle.client.class%">
+            <argument>https://github.com/</argument>
+            <call method="setDefaultOption">
+                <argument>headers</argument>
+                <argument type="collection">
+                    <argument key="Accept">application/json</argument>
+                </argument>
+            </call>
+            <tag name="guzzle.client"/>
+        </service>
+
+        <service id="api.twitter.client" class="%guzzle.client.class%">
+            <argument>https://api.twitter.com/</argument>
+            <call method="setDefaultOption">
+                <argument>headers</argument>
+                <argument type="collection">
+                    <argument key="Accept">application/json</argument>
+                </argument>
+            </call>
+            <tag name="guzzle.client"/>
+        </service>
+
+        <service id="oauth.provider.twitter" class="Saro0h\ShopBundle\Security\TwitterProvider">
+            <argument type="service" id="api.twitter.client" />
+            <argument type="service" id="logger" />
+        </service>
+
+        <service id="oauth.provider.github" class="Saro0h\ShopBundle\Security\GithubProvider">
+            <argument type="service" id="api.twitter.client" />
+            <argument type="service" id="logger" />
+        </service>
+    </services>
+</container>

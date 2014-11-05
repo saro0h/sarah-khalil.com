@@ -1,12 +1,22 @@
 security:
     providers:
-        in_memory:
-            memory: ~
+        twitter:
+            id: oauth.provider.twitter
+        github:
+            id: oauth.provider.github
+        chain_provider:
+            chain:
+                providers:  [ twitter, github ]
 
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+
+        #secured_area:
+        #    pattern: ^/admin
+            #remote_user:
+        #        provider: chain_provider
 
         default:
             anonymous: ~
