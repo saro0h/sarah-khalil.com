@@ -42,6 +42,12 @@ kata_event_listener:
         _controller: FrameworkBundle:Template:template
         template: 'AppBundle:Blog/Code:kataEventListener.html.twig'
 
+kata_oauth:
+    path: /blog/code/kata-oauth
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppBundle:Blog/Code:kataOauth.html.twig'
+
 playground_rabbitmq:
     path: /blog/code/playground-rabbitmq
     defaults:

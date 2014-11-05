@@ -2,7 +2,7 @@
     "name": "saro0h/luckybambou",
     "license": "MIT",
     "type": "project",
-    "description": "Sarah Khalil\'s website.",
+    "description": "Sarah Khalil's website.",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
